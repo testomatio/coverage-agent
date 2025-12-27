@@ -1,0 +1,30 @@
+{
+  "name": "@testomatio/test-coverage-agent",
+  "version": "0.1.0",
+  "description": "Manual tests to code coverage agent using Claude Code",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "test-coverage-agent": "./src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "testomatio",
+    "coverage",
+    "claude",
+    "testing"
+  ],
+  "author": "Testomatio",
+  "license": "MIT",
+  "dependencies": {
+    "check-tests": "^0.15.1",
+    "commander": "^12.1.0",
+    "js-yaml": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

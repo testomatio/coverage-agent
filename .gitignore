@@ -1,0 +1,5 @@
+node_modules/
+coverage.manual.yml
+coverage.e2e.yml
+*.log
+.DS_Store
