@@ -11,6 +11,11 @@
     "start": "node src/cli.js",
     "test": "node --test"
   },
+  "files": [
+    "src/",
+    "LICENSE",
+    "README.md"
+  ],
   "keywords": [
     "testomatio",
     "coverage",
