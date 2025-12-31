@@ -1,5 +1,5 @@
 {
-  "name": "@testomatio/test-coverage-agent",
+  "name": "@testomatio/coverage-agent",
   "version": "0.1.0",
   "description": "Manual tests to code coverage agent using Claude Code",
   "type": "module",

@@ -171,11 +171,14 @@ jobs:
         with:
           fetch-depth: 0
       
+      # here you should install browsers
+      # and prepare application for testing
+      
       - name: Run affected E2E tests
         env:
           TESTOMATIO: ${{ secrets.TESTOMATIO }}
         run: |
-          npx @testomatio/reporter run \
+          npx @testomatio/reporter run "npx playwright test"            
             --kind automated \
             --filter "coverage:file=coverage.e2e.yml,diff=origin/main"
 

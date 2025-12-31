@@ -131,9 +131,29 @@ Save the YAML to `{output}` and display it to the user.
 
 Briefly explain which source files were analyzed, mapping choices made, and ask user to review manual tests in `{tests_dir}` folder.
 
+### Further Steps
+
+Once finished, propose user next operations:
+
+- Scan for testing gaps through source code and suggest manual tests to be created
+- Scan for dead tests, tested functionality which is missing from source code
+- Ask you questions "do we have manual tests for X?"
+- Add missing manual tests to markdown files to cover cases found in source code
+
+When doing changes in `{tests_dir}` ask user to review and push changes to Testomat.io
+```
+npx check-tests@latest push
+```
+
+> User will need to use TESTOMATIO API key to push manual tests
+
+
 ## What to Ignore
 
-**DO NOT map these to manual tests:**
+You should ignore files that are not business code of application.
+For instance, ignore test code.
+
+**DO NOT map unit tests to manual tests:**
 - Test files (`*.test.js`, `*.spec.js`, `*_test.rb`, `test_*.py`, etc.)
 - Spec files (`*.spec.ts`, `*.spec.jsx`, etc.)
 - E2E test files (Cypress `*.cy.js`, Playwright `*.spec.ts`, etc.)
